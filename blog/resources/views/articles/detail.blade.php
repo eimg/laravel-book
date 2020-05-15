@@ -47,6 +47,7 @@
 
         @auth
             <form action="{{ url('/comments/add') }}" method="post">
+                @csrf
                 <input type="hidden" name="article_id"
                     value="{{ $article->id }}">
                 <textarea name="content"
